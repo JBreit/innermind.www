@@ -1,1 +1,1 @@
-require('module-alias/register');
+

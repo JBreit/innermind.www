@@ -7,12 +7,26 @@
           "esmodules": true
         }
     }],
+
+    "@babel/preset-modules",
     "@babel/preset-react"
   ],
   "plugins": [
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-transform-modules-commonjs",
     "@babel/plugin-transform-template-literals",
-    "@babel/plugin-transform-spread"
+    "@babel/plugin-transform-spread",
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "application": "./src/application",
+        "config": "./config",
+        "domain": "./src/domain",
+        "infrastructure": "./src/infrastructure",
+        "interface": "./src/interface",
+        "src": "./src",
+        "test": "./test"
+      }
+    }]
   ]
 }
