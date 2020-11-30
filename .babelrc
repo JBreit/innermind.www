@@ -1,14 +1,18 @@
 {
   "presets": [
-    [
-      "env",
-      {
-        "modules": false
-      }
-    ],
-    "react"
+    ["@babel/preset-env", {
+        "modules": false,
+        "useBuiltIns": "usage",
+        "targets": {
+          "esmodules": true
+        }
+    }],
+    "@babel/preset-react"
   ],
   "plugins": [
-
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-modules-commonjs",
+    "@babel/plugin-transform-template-literals",
+    "@babel/plugin-transform-spread"
   ]
 }

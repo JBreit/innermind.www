@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     node: true,
-    es6: true,
+    es6: true
   },
   extends: [
     // 'airbnb',
@@ -11,12 +11,13 @@ module.exports = {
   //   Atomics: 'readonly',
   //   SharedArrayBuffer: 'readonly',
   // },
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
+    allowImportExportEverywhere: true,
     ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
-        jsx: true
+      jsx: true
     }
   },
   plugins: [
@@ -53,5 +54,5 @@ module.exports = {
         ]
       }
     ]
-  },
+  }
 };
